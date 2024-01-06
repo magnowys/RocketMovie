@@ -3,56 +3,54 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-
-    overflow-y: auto;
-    
-    &::-webkit-scrollbar {
-    width: 0.8rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.COLORS.PINK};
-        border-radius: 0.8rem;
-    }
     
     display: grid;
     grid-template-rows: 105px auto;
     grid-template-areas: 
     "header"
     "content";
+    
 
     >main {
         grid-area: content;
-
-
         
-        padding: 64px 0;
+        overflow-y: auto;
+        
+        &::-webkit-scrollbar {
+        width: 0.8rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: ${({ theme }) => theme.COLORS.PINK};
+            border-radius: 0.8rem;
+        }
+        
+        padding: 24px;
         max-width: 1113px;
-        margin: 0 auto;
+        margin: 40px auto;
 
         a {
             display: flex;
             align-items: center;
-            color: ${({ theme}) => theme.COLORS.PINK};
+            color: ${({ theme }) => theme.COLORS.PINK};
         }
-    }
-    ;
+
+        >div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >button {
+                color: ${({ theme }) => theme.COLORS.GRAY_100};
+            }
+        }        
+    };
 `;
 
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
-    overflow-y: auto;
-    
-    &::-webkit-scrollbar {
-    width: 0.8rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.COLORS.PINK};
-        border-radius: 0.8rem;
-    }
 
 
     > p {
@@ -89,9 +87,20 @@ export const Content = styled.div`
                 }
                 
                 svg {
-                    color: ${({ theme}) => theme.COLORS.PINK};
+                    color: ${({ theme }) => theme.COLORS.PINK};
                 }
+                
+
          }
-    }
+         
+         footer{
+            display: flex;
+            gap: 8px;
+
+            >span{
+                background:${({ theme }) => theme.COLORS.BACKGROUND_TAG} ;
+            }
+        }
+    }  
         
 `;

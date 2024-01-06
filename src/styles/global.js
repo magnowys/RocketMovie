@@ -5,6 +5,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        
     }
 
     body{
@@ -12,6 +13,7 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.COLORS.WHITE};
 
         -webkit-font-smoothing: antialiased;
+        overflow: hidden;
     }
 
     body, input, button, textarea {

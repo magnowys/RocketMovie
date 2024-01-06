@@ -15,6 +15,10 @@ export const Container = styled.header `
     display: flex;
     gap: 64px;
 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 123px;
+
 
 
     > h1 {
